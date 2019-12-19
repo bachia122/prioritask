@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+
+
+<form action="/delete" method="post">
+<div class="form-group">
+
+
+
+<select class="form-control" name="level">
+
+  <optgroup label="Level 1 - Do Now">
+        {% for task in tasks1 %}
+        <option value="{{ task.task }}" >{{ task.task }}</option>
+        {% endfor %}
+  </optgroup>
+  <optgroup label="Level 2 - Schedule">
+        {% for task in tasks2 %}
+        <option value="{{ task.task }}" >{{ task.task }}</option>
+        {% endfor %}
+  </optgroup>
+    <optgroup label="Level 3 - Assign">
+        {% for task in tasks3 %}
+        <option value="{{ task.task }}" >{{ task.task }}</option>
+        {% endfor %}
+    </optgroup>
+    <optgroup label="Level 4 - Eliminate">
+        {% for task in tasks4 %}
+        <option value="{{ task.task }}" >{{ task.task }}</option>
+        {% endfor %}
+  </optgroup>
+</select>
+
+<button class="btn btn-primary" type="submit">Delete </button><br>
+
+    </form>
+    </div>
+{% endblock %}

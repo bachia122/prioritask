@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Urgent Task
+{% endblock %}
+
+{% block main %}
+    <form action="/append3" method="post">
+<div class="form-group">
+
+
+ <p> <input autocomplete="off" autofocus class="form-control" name="task" placeholder="Urgent Task!" type="text">
+ </p>
+ <p>Delegate to:</p><input autocomplete="off" autofocus class="form-control" name="person" placeholder="Name of Person in Charge" type="text">
+
+
+</div>
+
+
+        <button class="btn btn-primary" type="submit">Add Urgent Task</button>
+    </form>
+{% endblock %}

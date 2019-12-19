@@ -1,3 +1,12 @@
+
+/*https://uigradients.com*/
+
+.navbar {
+  height: 60px;
+
+}
+
+
 nav .navbar-brand
 {
     /* size for brand */
@@ -28,7 +37,7 @@ main .form-control
     display: inline-block;
 
     /* override Bootstrap's 100% width for form controls */
-    width: auto;
+    width: 300px;
 }
 
 main
@@ -44,4 +53,18 @@ main img
 {
     /* constrain images on small screens */
     max-width: 100%;
+}
+
+.pointer {cursor: pointer;}
+
+.navbar-nav > li{
+  margin-left:30px;
+  margin-right:10px;
+}
+
+body {
+background: #bbd2c5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fff, #bbd2c5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fff, #bbd2c5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

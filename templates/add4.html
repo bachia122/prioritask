@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add Unnecessary Task
+{% endblock %}
+
+{% block main %}
+<style>
+    button {width:15em}
+    button:hover span {display:none}
+    button:hover:before {content:"All right. You're the boss."}
+</style>
+    <form action="/append4" method="post">
+<div class="form-group">
+
+
+  <input autocomplete="off" autofocus class="form-control" name="task" placeholder="[Insert task you're better off not doing.]" type="text">
+
+
+</div>
+
+        <button class="btn btn-primary" type="submit" onclick="change()" id="button1"><span>Are you sure about this?</span></button>
+  </form>
+
+
+
+{% endblock %}

@@ -1,0 +1,123 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Tasks
+{% endblock %}
+
+{% block main %}
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  min-height: 300px;
+  overflow: auto;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+}
+
+li{
+    margin: 10px 0;
+}
+
+.list-thunder :before {
+    content: "⚡";
+    display: block;
+    float: left;
+    width: 1.5em;
+}
+
+
+.list-star :before {
+    content: "☆";
+    display: block;
+    float: left;
+    width: 1.5em;
+    color: #000;
+}
+
+.list-urgent :before {
+    content: "⚠";
+    display: block;
+    float: left;
+    width: 1.5em;
+    color: #000;
+}
+.list-useless :before {
+    content: "☒";
+    display: block;
+    float: left;
+    width: 1.5em;
+    color: #000;
+}
+</style>
+
+<div class="row">
+  <div class="p-5 col-sm pointer" style="background-color:#cc3737;" onclick="location.href='/append1';">
+    <font color="#ffe6cc"><h1><b>DO NOW</b></h1>
+<small><b>Important</b> and <i>Urgent!</i></small><br><br>
+
+<ul align="left" class="list-thunder">
+        {% for task in tasks1 %}
+        <li>  {{ task.task }}</li>
+        {% endfor %}
+</ul></font>
+  </div>
+  <div class="p-5 col-sm pointer" style="background-color:#9fdf9f;" onclick="location.href='/append2';">
+    <h2><b>SCHEDULE</b></h2>
+<small><b>Important!</b></small><br><br>
+<ul align="left" class="list-star">
+        {% for task in tasks2 %}
+        <li> {{ task.task }}</li>
+        {% endfor %}
+</ul>
+  </div>
+
+
+  <div class="p-5 col-sm pointer" style="background-color:#72a0c1;" onclick="location.href='/append3';">
+    <h2><b>ASSIGN</b></h2>
+    <small><i>Urgent</i> but not important..</small><br><br>
+
+    <ul align="left" class="list-urgent">
+        {% for task in tasks3 %}
+        <li>  {{ task.task }}</li>
+        {% endfor %}
+    </ul>
+  </div>
+
+
+  <div class="p-5 col-sm pointer" style="background-color:#aaa;" onclick="location.href='/append4';">
+    <h2><b>ELIMINATE</b></h2>    <small>Nothing to see here..</small><br><br>
+
+            <ul align="left" class="list-useless">
+        {% for task in tasks4 %}
+        <li>  {{ task.task }}</li>
+        {% endfor %}
+        </ul>
+  </div>
+</div>
+<br><br>
+
+        <a href="/delete" class="btn btn-info" role="button">I've accomplished a task!</a><br>
+
+{% endblock %}
