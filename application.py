@@ -29,8 +29,8 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
-# Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///tasks.db")
+# Configure CS50 Library to use Postgres database
+db = SQL("postgres://oxcnnvjmwcczza:be72202b1de9728488ebeb9b44c7ba539f43364d0ab0df9a591d74a86c40eb27@ec2-174-129-255-57.compute-1.amazonaws.com:5432/d2en2bca1t0jnh")
 
 
 @app.route("/")
