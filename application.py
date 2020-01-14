@@ -36,8 +36,8 @@ Session(app)
 db = SQL("postgres://oxcnnvjmwcczza:be72202b1de9728488ebeb9b44c7ba539f43364d0ab0df9a591d74a86c40eb27@ec2-174-129-255-57.compute-1.amazonaws.com:5432/d2en2bca1t0jnh")
 
 #postgres
-DATABASE_URL = os.environ['DATABASE_URL']
-conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+#DATABASE_URL = os.environ['DATABASE_URL']
+#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 @app.route("/")
 @login_required
