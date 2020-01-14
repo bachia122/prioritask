@@ -1,8 +1,7 @@
 import os
 import psycopg2
 
-from library50 import cs50
-import sqlalchemy
+from cs50 import sql
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
@@ -34,11 +33,11 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 # Configure CS50 Library to use Postgres database
-db = SQL("postgres://oxcnnvjmwcczza:be72202b1de9728488ebeb9b44c7ba539f43364d0ab0df9a591d74a86c40eb27@ec2-174-129-255-57.compute-1.amazonaws.com:5432/d2en2bca1t0jnh")
+#db = SQL("postgres://oxcnnvjmwcczza:be72202b1de9728488ebeb9b44c7ba539f43364d0ab0df9a591d74a86c40eb27@ec2-174-129-255-57.compute-1.amazonaws.com:5432/d2en2bca1t0jnh")
 
 #postgres
-#DATABASE_URL = os.environ['DATABASE_URL']
-#conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+db = os.environ['DATABASE_URL']
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 @app.route("/")
 @login_required
