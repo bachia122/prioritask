@@ -22,7 +22,7 @@ When you've accomplished a task, or simply want to delete it, you can either cli
 
 ## Other
 ~ Built on the Finance Pset skeleton.<br>
-~ Tools used include Flask, Bootstrap, and SQLite.<br>
+~ Tools used include Flask, Bootstrap, and PostgreSQL.<br>
 ~ Short demo on YouTube: https://youtu.be/DzMn8oe2qMA<br>
 ~ This has been a blast. Thank you CS50.<br>
 
